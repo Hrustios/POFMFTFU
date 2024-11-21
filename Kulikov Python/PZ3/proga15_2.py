@@ -18,5 +18,5 @@ try:
     else:
         print("Точка не лежит на координатных осях: 3")
 
-except ValueError:
+except ValueError: 
     print("Ошибка: Введите корректные целые числа для координат.")
