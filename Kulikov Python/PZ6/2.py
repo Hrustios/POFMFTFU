@@ -20,5 +20,5 @@ def count_unique(lst):
         return 0
 
 # Пример вызова
-lst = [1, 1, 2, 2, 3, 3, 1]
+lst = [1, 1, 2, 2, 3, 3, 4, 1]
 count_unique(lst)
