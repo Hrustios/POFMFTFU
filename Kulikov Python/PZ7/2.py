@@ -1,7 +1,7 @@
 #Дана строка-предложение на русском языке. Подсчитать количество содержащихся в строке знаков препинания
 def count_punctuation(string="Привет! Как дела? Это — тестовая строка."):
     try:
-        punctuation = set(".,!?;:-—()\"'")  # Набор символов знаков препинания
+        punctuation = set(".,!?;:-—()\"'")  # знаки препинания
         count = 0
         for char in string:
             if char in punctuation:
@@ -12,6 +12,5 @@ def count_punctuation(string="Привет! Как дела? Это — тест
         print("Ошибка обработки строки.")
         return 0
 
-# Пример вызова
 string = input("Введите вашу строку: \n")
 count_punctuation(string)
