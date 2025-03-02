@@ -1,0 +1,25 @@
+from random import randint
+
+_list  = [x for x in range(randint(-50,0),randint(5,50))]
+
+f1 = open('nums.txt','w',encoding='utf-8')
+
+_min = min(_list) #минимальное значение
+c_min = _list.count(_min)#количество одинаковых минимальных значений
+i_m = 0 #индекс нахождения для цикла
+p_m_i = 0 #старт от этого индекса
+while i_m < c_min:
+    cur_m_i = _list.index(_min, p_m_i)#текущий индекс минимального
+    p_m_i = cur_m_i + 1 #сохраняет значение для следующей итерации
+    i_m += 1
+
+f1.write(f'Исходные данные: {", ".join(map(str,_list))}\n')
+print(f'Исходные данные: {", ".join(map(str,_list))}\n')
+f1.write(f'Количество элементов: {len(_list)}\n')
+print(f'Количество элементов: {len(_list)}\n')
+f1.write(f'Индекс последнего минимального элемента: {cur_m_i}\n')
+print(f'Индекс последнего минимального элемента: {cur_m_i}\n')
+f1.write(f'Умножаем все элементы на первый элемент: {", ".join(map(str,[x*_list[0] for x in _list]))}')
+print(f'Умножаем все элементы на первый элемент: {", ".join(map(str,[x*_list[0] for x in _list]))}')
+input()
+f1.close
