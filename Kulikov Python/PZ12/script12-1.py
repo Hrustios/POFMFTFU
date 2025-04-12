@@ -7,7 +7,11 @@ from random import randint
 from functools import reduce
 
 def main():
-    _list = [x for x in range(randint(-100,0),randint(0,100))]
+    n = int(input("Введите колличество чисел последовательности:\n"))
+    start = randint(-5,0)
+    end = start + n
+    _list = [x for x in range(start,end)]
+    print(f'Последовательность для обработки: {", ".join(map(str,(_list)))}')
 
     print("Максимальное число из последовательности:",max(_list))
     print("Минимальное число из последовательности:",min(_list))
