@@ -4,7 +4,7 @@
 # Использовать модуль pickle для сериализации и десериализации объектов Python в бинарном формате.
 
 import pickle
-from bank import Bank
+from script16_1 import Bank
 
 def save_def(bank_objects, filename):#Сохраняет список объектов Bank в файл    
     with open(filename, 'wb') as f:
