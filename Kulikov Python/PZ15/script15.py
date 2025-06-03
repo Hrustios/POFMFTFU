@@ -223,5 +223,4 @@ def main_menu():
                 print("Некорректный выбор. Попробуйте снова.")
             
 
-if __name__ == "main":
-    main_menu()
+main_menu()
